@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <script type="text/javascript" src="util.js"></script>
+    <script>
+
+        function getLanguage() {
+			// alert("start of getLanguage() impl");
+			// const lastLanguage = getCookie("pref-lang");
+			const lastLanguage = getPreferredLanguage();
+			alert("lastLanguage: " + lastLanguage);
+			var language =
+				lastLanguage ||
+                navigator.language ||
+				navigator.browserLanguage ||
+				navigator.systemLanguage ||
+				navigator.userLanguage ||
+				"english";
+			language = language.toLowerCase().substr(0, 2);
+			alert("language: " + language);
+			return language;
+		}
+
+		// alert("before call to getLanguage()");
+		const language = getLanguage();
+		// alert(language);
+        window.location.href = `./main_${language}.html`;
+    </script>
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
