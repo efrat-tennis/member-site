@@ -35,6 +35,8 @@ function getPreferredLanguage() {
 }
 
 function setPreferredLanguage(lang) {
+	alert("about to set pref lang: " + lang);
 	localStorage.setItem("pref-lang", lang);
 	alert("just set pref lang: " + getPreferredLanguage());
+	alert("2nd try: just set pref lang: " + getPreferredLanguage());
 }

@@ -7,8 +7,6 @@
     <script>
 
         function getLanguage() {
-			// alert("start of getLanguage() impl");
-			// const lastLanguage = getCookie("pref-lang");
 			const lastLanguage = getPreferredLanguage();
 			alert("lastLanguage: " + lastLanguage);
 			var language =
@@ -23,9 +21,7 @@
 			return language;
 		}
 
-		// alert("before call to getLanguage()");
 		const language = getLanguage();
-		// alert(language);
         window.location.href = `./main_${language}.html`;
     </script>
 
